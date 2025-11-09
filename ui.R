@@ -3,9 +3,13 @@
 
 
 ui <- fluidPage(
-  titlePanel("Treatment-independent live birth prediction calculator"),
+  titlePanel("Treatment-independent live birth calculator"),
   sidebarLayout(
     sidebarPanel(
+      h4(
+        "Enter patient characteristics at the point of diagnosis of infertility."
+      ),
+      hr(),
       h4("Couple Details"),
       numericInput(
         "FAge",
@@ -53,14 +57,16 @@ ui <- fluidPage(
         selected = 0
       ),
       
+      hr(),
+      
       h4("Causes of infertility"),
       
-      checkboxInput("spermdx", "Diagnosis of male factor infertility", value = FALSE),
-      checkboxInput("endometdx", "Diagnosis of endometriosis", value = FALSE),
-      checkboxInput("ovulatory", "Diagnosis of anovulatory infertility", value = FALSE),
-      checkboxInput("Unexplained", "Diagnosis of unexplained infertility", value = FALSE),
+      checkboxInput("spermdx", "Diagnosis of male factor infertility?", value = FALSE),
+      checkboxInput("endometdx", "Diagnosis of endometriosis?", value = FALSE),
+      checkboxInput("ovulatory", "Diagnosis of anovulatory infertility?", value = FALSE),
+      checkboxInput("Unexplained", "Diagnosis of unexplained infertility?", value = FALSE),
       checkboxInput("Tubal", "Diagnosis of tubal infertility i.e. blocked, missing or damaged fallopian tube(s)?", value = FALSE),
-      checkboxInput("other", "Other infertility diagnosis", value = FALSE)
+      checkboxInput("other", "Other infertility diagnosis i.e. cervical, uterine or sexual problem?", value = FALSE)
     ),
     mainPanel(
       actionButton(inputId = "calculate",
@@ -69,7 +75,7 @@ ui <- fluidPage(
       hr(), # horizontal rule for separation
       
       h3(
-        "Predicted probability of treatment-independent pregnancy within 365 days from diagnosis of infertility, leading to a live birth:"
+        "Predicted probability of treatment-independent pregnancy live birth:"
       ),
       
       wellPanel(
