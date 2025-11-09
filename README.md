@@ -14,7 +14,7 @@ The interactive calculator is hosted on shinyapps.io and is available here:
 This tool was developed as part of the following publication:
 * **Title:** "Predicting the chance of treatment-independent live birth in couples diagnosed with different types of infertility"
 * **Submitted to:** Human Reproduction Open, in review.
-* **Authors:** N.J. Cameron, D.J. McLernon, S. Bhattacharya.
+* **Authors:** N.J. Cameron, K. Brian, D.J. McLernon, S. Bhattacharya.
   
 ---
 
