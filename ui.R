@@ -3,7 +3,7 @@
 
 
 ui <- fluidPage(
-  titlePanel("Treatment-independent live birth calculator"),
+  titlePanel("Calculator for estimated chance of natural pregnancy leading to live birth, for couples diagnosed with infertility"),
   sidebarLayout(
     sidebarPanel(
       h4(
@@ -75,7 +75,7 @@ ui <- fluidPage(
       hr(), # horizontal rule for separation
       
       h3(
-        "Predicted probability of treatment-independent pregnancy live birth:"
+        "Predicted probability of natural pregnancy within first year from diagnosis of infertility, leading to a live birth:"
       ),
       
       wellPanel(
@@ -91,10 +91,11 @@ ui <- fluidPage(
         p(
           tags$strong("DISCLAIMER:"), #makes the first word bold
           "This tool uses the information you have entered above to estimate the individual chance of a ",
-          tags$strong("treatment-independent live birth"),
+          tags$strong("live birth resulting from a natural pregnancy"),
           ". ",
           "Specifically, it estimates the chance of spontaneous pregnancy occurring within the first year from a diagnosis of infertility (and before starting any treatment), with that pregnancy going on to lead to a live birth. ",
-          "These estimates are based on the patient data we used when making this model, and represents the outcomes of couples with similar characteristics to those you have entered into the calculator. ",
+          "These estimates are based on the patient data we used when making this model, and represents the outcomes of couples with similar characteristics to those you have entered into the calculator. 
+          7086 couples were included in the original study, who registered at a single tertiary fertility centre between 1998-2015.",
           "As such, the estimate may not represent your experience. ",
           "This is particularly important in characteristics where we had fewer patients to base our estimates on, such as the higher age groups. ",
           "We would recommend to interpret these results with caution and alongside discussions with your medical team about your individual fertility journey."

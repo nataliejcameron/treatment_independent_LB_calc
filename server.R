@@ -55,10 +55,10 @@ server <- function(input, output) {
       "<strong>", predrisk3_precise, "%</strong>",
       " means that if there were 100 couples with similar characteristics to those you selected above, ",
       "<strong>", predrisk3_rounded, "</strong>",
-      " of these couples are estimated to have a treatment-independent live birth from a pregnancy that started in the first year from diagnosis. ",
+      " of these couples are estimated to have a live birth from a natural pregnancy that started in the first year from diagnosis. ",
       "This also means that ",
       "<strong>", (100 - predrisk3_rounded), "</strong>",
-      " of these couples are estimated to not have a treatment-independent live birth in the same timeframe.",
+      " of these couples are estimated to not have a live birth in the same timeframe.",
       "</p>"
     )
   })
