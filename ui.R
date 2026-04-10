@@ -94,12 +94,26 @@ ui <- fluidPage(
           tags$strong("live birth resulting from a natural pregnancy"),
           ". ",
           "Specifically, it estimates the chance of spontaneous pregnancy occurring within the first year from a diagnosis of infertility (and before starting any treatment), with that pregnancy going on to lead to a live birth. ",
+          br(), br(),
           "These estimates are based on the patient data we used when making this model, and represents the outcomes of couples with similar characteristics to those you have entered into the calculator. 
           7086 couples were included in the original study, who registered at a single tertiary fertility centre between 1998-2015.",
+          br(),
           "As such, the estimate may not represent your experience. ",
           "This is particularly important in characteristics where we had fewer patients to base our estimates on, such as the higher age groups. ",
+          br(), br(),
           "We would recommend to interpret these results with caution and alongside discussions with your medical team about your individual fertility journey."
         )
-      )
+      ),
+      
+      hr(),
+      
+      div(
+        style = "font-size: 0.9em; color: #555",
+        p(
+        "The source code used to build this calculator is freely available online at",
+        a("our GitHub repository.",
+          href = "https://github.com/nataliejcameron/LB_calc",
+          target = "_blank")
+      ))
   )
 ))
