@@ -85,11 +85,12 @@ riskcalc <- function(FirstRegYear,
   # Survival probability at 365 days
   #adjust for shrinkage given subgroups of Endometriosis and Other have lower calibration slope
   #replace_when stops when first condition is true
-  PI_shrinkage <- replace_when(
-    PI,
-    endometdx == 1 ~ PI * 0.59,
-    other == 1 ~ PI * 0.60
-  )
+  PI_shrinkage <- PI
+  if (endometdx == 1) {
+    PI_shrinkage <- PI * 0.59
+  } else if (other == 1) {
+    PI_shrinkage <- PI * 0.60
+  }
   
   risk_365 <- 1 - (0.8776930515^(exp(PI_shrinkage)))
   return(round(risk_365, 3))
